@@ -3,6 +3,7 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'checkstyle'
+apply plugin: 'pmd'
 
 version = '1.0'
 
@@ -12,6 +13,10 @@ repositories {
 
 checkstyle {
     toolVersion = 6.5
+    ignoreFailures = true
+}
+
+pmd {
     ignoreFailures = true
 }
 
