@@ -1,8 +1,6 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
-//apply plugin: "sonar-runner"
-apply plugin: "sonarqube-runner"
-
+apply plugin: "sonar-runner"
 
 version = '1.0'
 sonarRunner {
