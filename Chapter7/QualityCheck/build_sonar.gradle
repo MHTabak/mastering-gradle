@@ -1,14 +1,20 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
-apply plugin: "sonar-runner"
+//apply plugin: "sonar-runner"
+apply plugin: "sonarqube-runner"
 
 
 version = '1.0'
 sonarRunner {
 
+// Added per stackoverlfow
+toolversion = '2.4'
+
 sonarProperties {
 	property "sonar.host.url", "http://localhost:9000"
-	property "sonar.jdbc.url", "jdbc:h2:tcp://localhost:9092/sonar"
+	//property "sonar.jdbc.url", "jdbc:h2:tcp://localhost:9092/sonar"
+	property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar"
+        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
 	property "sonar.jdbc.driverClassName", "org.h2.Driver"
 	property "sonar.jdbc.username", "sonar"
 	property "sonar.jdbc.password", "sonar"
