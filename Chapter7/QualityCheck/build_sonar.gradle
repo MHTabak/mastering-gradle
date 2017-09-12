@@ -1,5 +1,5 @@
 // Added 
-plugin {
+plugins {
    id "org.sonarqube" version "2.4"
 }
 
@@ -14,13 +14,15 @@ apply plugin: 'org.sonarqube'
 version = '1.0'
 
 sonarqube {
-   properties {
-      	property 'sonar.projectName', 'Example of SonarQube Scanner for Gragle usage'
+	properties {
+	property 'sonar.projectName', 'Example of SonarQube Scanner for Gragle usage'
 	property 'sonar.host.url', 'http://localhost:9000'
 	property 'sonar.jdc.url', 'jdbc:mysql://localhost:3306/sonar'
 	property 'sonar.jdbcDriverClassname', 'com.mysql.jdbc.Driver'
-   {
-{
+	property 'sonar.scm.provider' 
+   }
+}
+
 
 // Deleted must use gradle 3.5
 /*
