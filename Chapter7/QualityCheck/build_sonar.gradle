@@ -5,7 +5,7 @@ apply plugin: "sonar-runner"
 version = '1.0'
 
 sonarRunner {
-   toolversion = '2.4'
+   toolVersion = '2.4'
 }
 
 sonarRunner {
