@@ -1,13 +1,29 @@
+// Added 
+plugin {
+   id "org.sonarqube" version "2.4"
+}
+
+apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
-apply plugin: "sonar-runner"
+//apply plugin: "sonar-runner"
+
+// Added
+apply plugin: 'org.sonarqube'
 
 version = '1.0'
 
-sonarRunner {
-   toolVersion = '2.4'
-}
+sonarqube {
+   properties {
+      	property 'sonar.projectName', 'Example of SonarQube Scanner for Gragle usage'
+	property 'sonar.host.url', 'http://localhost:9000'
+	property 'sonar.jdc.url', 'jdbc:mysql://localhost:3306/sonar'
+	property 'sonar.jdbcDriverClassname', 'com.mysql.jdbc.Driver'
+   {
+{
 
+// Deleted must use gradle 3.5
+/*
 sonarRunner {
 
 sonarProperties {
@@ -20,6 +36,7 @@ sonarProperties {
 	property "sonar.jdbc.password", "sonar"
 }
 }
+*/
 
 repositories {
     mavenCentral()
